@@ -33,6 +33,7 @@ int dim_albero(const Albero a);
 int depth(const Albero a);
 bool is_balanced(const Albero a);
 bool is_complete(const Albero a);
+void popola_albero(Albero & a, int n);
 
 /*
 Albero a = new (nothrow) nodo{0,nullptr,nullptr};

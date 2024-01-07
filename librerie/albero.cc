@@ -37,7 +37,7 @@ void deinit_albero(Albero &a) {
   }
 }
 
-void insert(Albero &a, int value) {
+void insert(Albero & a, int value) {
   if (a == nullptr) { // caso base se l'albero è vuoto lo inizializzo con un
                       // nodo avente quel valore
     a = init_albero(value);
@@ -87,7 +87,7 @@ bool search(const Albero a, int value) {
   }
 }
 
-nodo *search_nodo(const Albero a, int value) {
+nodo * search_nodo(const Albero a, int value) {
   if (a == nullptr) {
     return nullptr;
   } else if (a->value == value) {
@@ -174,6 +174,7 @@ int depth(const Albero a) {
   }
 }
 
+//bilanciato se la differenza tra le altezze dei sottoalberi sinistro e destro
 bool is_balanced(const Albero a) {
   if (a == nullptr) {
     return true;
@@ -188,6 +189,7 @@ bool is_balanced(const Albero a) {
   }
 }
 
+//completo se tutti i nodi hanno 0 o 2 figli
 bool is_complete(const Albero a) {
   if (a == nullptr) {
     return true;
@@ -199,5 +201,12 @@ bool is_complete(const Albero a) {
     return false;
   } else {
     return is_complete(a->left) && is_complete(a->right);
+  }
+}
+
+//popola albero (inserisce i valori nell'albero) in maniera randomica
+void popola_albero(Albero &a, int n) {
+  for (int i = 0; i < n; i++) {
+    insert(a, rand() % 100);
   }
 }
