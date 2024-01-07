@@ -1,9 +1,27 @@
-//funzione che converte un numero da una base ad un'altra base
+
 
 #include <iostream>
 
 using namespace std;
 
+//funzione che converte un numero da string a int 
+int converti_string_int(char * numero) {
+    int risultato = 0; //risultato della conversione
+    int potenza = 1; //potenza della base 10 da moltiplicare per ogni cifra
+    int i = 0; //indice per scorrere il numero
+    while (numero[i] != '\0') { //scorro il numero fino a che non trovo il carattere terminatore
+        i++;
+    }
+    i--; //decremento l'indice perche' l'ultimo carattere e' il carattere terminatore
+    while (i >= 0) { //scorro il numero al contrario
+        risultato += (numero[i] - '0') * potenza; 
+        potenza *= 10;
+        i--;
+    }
+    return risultato;
+}
+
+//funzione che converte un numero da una base ad un'altra base
 int converti_base(int numero, int base_partenza, int base_arrivo) {
     int risultato = 0;
     int potenza = 1;
