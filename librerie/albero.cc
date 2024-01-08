@@ -1,4 +1,5 @@
 #include "albero.hpp"
+#include <random>
 using namespace std;
 // si invoca "stampaAlbero(radice);"
 void stampaAlbero(albero radice, int spazio = 0);
@@ -206,6 +207,7 @@ bool is_complete(const Albero a) {
 
 //popola albero (inserisce i valori nell'albero) in maniera randomica
 void popola_albero(Albero &a, int n) {
+  srand(time(NULL));
   for (int i = 0; i < n; i++) {
     insert(a, rand() % 100);
   }
