@@ -72,6 +72,8 @@ int * alloca_dispari(Albero a, int & dim){
 }
 
 int main(){
+    
+
     Albero a = init_albero();
     popola_albero(a, 10);
     print_identata(a);
