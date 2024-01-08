@@ -6,8 +6,8 @@
 
 struct nodo {
   int value;
-  nodo *left;
-  nodo *right;
+  nodo * left;
+  nodo * right;
 };
 typedef nodo *Albero;
 typedef Albero albero;
@@ -16,9 +16,9 @@ typedef Albero albero;
 Albero init_albero();
 Albero init_albero(int value);
 // deinti_albero
-void deinit_albero(Albero &a);
+void deinit_albero(Albero & a);
 // metodi principali
-void insert(Albero &a, int value);
+void insert(Albero & a, int value);
 // funzione che stampa l'albero in modo da vedere le identazioni ecc dalla root
 // alla foglia
 void print_identata(const Albero a);

@@ -4,7 +4,7 @@
 
 #include <iostream>
 
-int mstrlen(const char* s) {
+int mstrlen(const char * s) {
     int i = 0;
     while (s[i] != '\0') {
         i++;
@@ -12,7 +12,7 @@ int mstrlen(const char* s) {
     return i;
 }
 
-char* mstrchr(char* s, char c) {
+char* mstrchr(char * s, char c) {
     int i = 0;
     while (s[i] != '\0') {
         if (s[i] == c) {
@@ -23,7 +23,7 @@ char* mstrchr(char* s, char c) {
     return nullptr;
 }
 
-char* mstrrchr(char* s, char c) {
+char* mstrrchr(char * s, char c) {
     int i = mstrlen(s) - 1;
     while (i >= 0) {
         if (s[i] == c) {
@@ -34,7 +34,7 @@ char* mstrrchr(char* s, char c) {
     return nullptr;
 }
 
-char* mstrstr(char* s, const char* t) {
+char* mstrstr(char * s, const char * t) {
     int i = 0;
     int j = 0;
     while (s[i] != '\0') {
@@ -51,7 +51,7 @@ char* mstrstr(char* s, const char* t) {
     return nullptr;
 }
 
-char* mstrcpy(char* s, const char* t) {
+char* mstrcpy(char * s, const char * t) {
     int i = 0;
     while (t[i] != '\0') {
         s[i] = t[i];
@@ -61,7 +61,7 @@ char* mstrcpy(char* s, const char* t) {
     return s;
 }
 
-char* mstrncpy(char* s, const char* t, int n) {
+char* mstrncpy(char * s, const char * t, int n) {
     int i = 0;
     while (i < n && t[i] != '\0') {
         s[i] = t[i];
@@ -74,7 +74,7 @@ char* mstrncpy(char* s, const char* t, int n) {
     return s;
 }
 
-char* mstrcat(char* s, const char* t) {
+char* mstrcat(char * s, const char * t) {
     int i = mstrlen(s);
     int j = 0;
     while (t[j] != '\0') {
@@ -86,7 +86,7 @@ char* mstrcat(char* s, const char* t) {
     return s;
 }
 
-char* mstrncat(char* s, const char* t, int n) {
+char* mstrncat(char * s, const char * t, int n) {
     int i = mstrlen(s);
     int j = 0;
     while (j < n && t[j] != '\0') {
@@ -98,7 +98,7 @@ char* mstrncat(char* s, const char* t, int n) {
     return s;
 }
 
-int mstrcmp(const char* s, const char* t) {
+int mstrcmp(const char * s, const char * t) {
     int i = 0;
     while (s[i] != '\0' && t[i] != '\0') {
         if (s[i] < t[i]) {

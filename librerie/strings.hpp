@@ -13,13 +13,13 @@ mstrcmp(s,t): restituisce un valore negativo, nullo o positivo se s è alfabeti
 #ifndef STRINGS_HPP
 #define STRINGS_HPP
 
-int mstrlen(const char* s);
-char* mstrchr(char* s, char c);
-char* mstrrchr(char* s, char c);
-char* mstrstr(char* s, const char* t);
-char* mstrcpy(char* s, const char* t);
-char* mstrncpy(char* s, const char* t, int n);
-char* mstrcat(char* s, const char* t);
-char* mstrncat(char* s, const char* t, int n);
-int mstrcmp(const char* s, const char* t);
+int mstrlen(const char * s);
+char * mstrchr(char * s, char c);
+char * mstrrchr(char * s, char c);
+char * mstrstr(char * s, const char * t);
+char * mstrcpy(char * s, const char * t);
+char * mstrncpy(char * s, const char * t, int n);
+char * mstrcat(char * s, const char* t);
+char * mstrncat(char * s, const char * t, int n);
+int mstrcmp(const char * s, const char * t);
 #endif
